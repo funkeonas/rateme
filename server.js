@@ -24,7 +24,7 @@ mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB_URI);
 
 require('./config/passport');
-require('./secret/secret');
+// require('./secret/secret');
 
 app.use(express.static('public'));
 app.engine('ejs', engine);
