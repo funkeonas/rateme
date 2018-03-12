@@ -21,7 +21,7 @@ app.use(compression());
 app.use(helmet());
 
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true});
 
 require('./config/passport');
 // require('./secret/secret');
